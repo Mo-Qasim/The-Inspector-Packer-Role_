@@ -1,0 +1,180 @@
+:root {
+  --animate-duration: 700ms;
+  --animate-delay: 1s;
+}
+
+*{
+  letter-spacing: 1px !important;
+}
+
+::selection{
+  background-color: #fff;
+  color: #1106CC;
+  padding: 8px 12px;
+}
+
+body{ 
+  margin: 0;
+  background: linear-gradient(to bottom, #f2fcfe, #1c92d2);
+  
+}
+
+.MuiToolbar-root, .MuiToolbar-regular, .MuiToolbar-gutters, .MuiContainer-root, .MuiContainer-maxWidthLg{
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+.nav{
+    border-color: transparent;
+    height: 60px;
+    transition: height 1s ease-in; 
+    background-color: #fff !important;
+    box-shadow: 0 1px 5px 0 rgba(96, 96, 96, 0.3) !important;
+}
+
+
+.navScroll{
+    border-color: transparent;
+    transition: height 1s ease-in; 
+    height: 100px;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.nav_menu{
+  position: fixed;
+  z-index: 1099;
+  top: 58px;
+  right: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.4s top cubic-bezier(0.3, -0.1, 0.52, 0.46);
+  padding: 30px 20px;
+  padding-top: 40px;
+  background-color: #ffffff;
+}
+
+.navTop{
+  transition: 0.3s ease-in;
+  background-color: transparent !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navBelow{
+  box-shadow: none !important;
+  background-color: #fff !important;
+}
+
+.scrollTop {
+  margin-left: 10px;
+  align-items: center;
+  display: flex;
+  height: 36px;
+  width: 36px;
+  background-color: rgb(29, 95, 154);
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s ease-in;
+  opacity: 0.5;
+}
+
+.down{
+  pointer-events: none;
+  opacity: 0;
+}
+
+.arrow{
+  transition: 0.3s ease-in;
+}
+
+.scrollTop:hover .arrow{
+  margin-bottom: 5px;
+}
+
+.scrollTop:hover{
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.bottomBtns{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 30px;
+  bottom: 30px;
+}
+
+.hide_img{
+  margin-bottom: 36px;
+}
+.hide{
+  top: -364px;
+}
+.show{
+  top: 47px;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 12%, 0);
+    transform: translate3d(0, 12%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+@media(max-width: 610px){
+.hide{
+  top: -364px;
+}
+.show{
+  top: 47px;
+}
+}
+
+
+@media(max-width: 767px){
+  .hide_img{
+    display: none;
+  }
+}
+
+@media(max-width: 991px){
+  .nhid_belowMD{
+    display: none;
+  }
+    .nav, .navScroll{
+    height: unset !important;
+  }
+}
+
+@media(min-width: 992px){
+  .nhid_aboveLG{
+    display: none;
+  }
+}
+
+
+
+
